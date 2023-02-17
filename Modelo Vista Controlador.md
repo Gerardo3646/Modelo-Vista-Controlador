@@ -9,6 +9,11 @@ Se trata de un modelo muy maduro y que ha demostrado su validez a lo largo de lo
 ### Modelo:
 
 Es la capa donde se trabaja con los datos, por tanto contendrá mecanismos para acceder a la información y también para actualizar su estado. Los datos los tendremos habitualmente en una base de datos, por lo que en los modelos tendremos todas las funciones que accederán a las tablas y harán los correspondientes selects, updates, inserts, etc.
+
+### Vista:
+
+La vista presenta o muestra la información necesaria en un formato apropiado con el que el usuario pueda interactuar. En otras palabras, es el componente que, tras recibir la información, genera la interfaz de usuario de la aplicación, botones, textos, ventanas, llamadas a la acción, estilos, etc. Todo aquello que el usuario observa es generado por este componente.
+
 ## Ejemplo de MVC
 
 Creación del Index donde estará la interfaz:
