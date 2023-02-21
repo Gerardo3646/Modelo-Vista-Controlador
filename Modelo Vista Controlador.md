@@ -9,10 +9,18 @@ Se trata de un modelo muy maduro y que ha demostrado su validez a lo largo de lo
 ### Modelo:
 
 Es la capa donde se trabaja con los datos, por tanto contendrá mecanismos para acceder a la información y también para actualizar su estado. Los datos los tendremos habitualmente en una base de datos, por lo que en los modelos tendremos todas las funciones que accederán a las tablas y harán los correspondientes selects, updates, inserts, etc.
+El modelo se encarga de:
+- Acceder a la capa de almacenamiento de datos. Lo ideal es que el modelo sea independiente del sistema de almacenamiento.
+- Define las reglas de negocio (la funcionalidad del sistema). Un ejemplo de regla puede ser: "Si la mercancía pedida no está en el almacén, consultar el tiempo de entrega estándar del proveedor".
+- Lleva un registro de las vistas y controladores del sistema.
 
 ### Vista:
 
 La vista presenta o muestra la información necesaria en un formato apropiado con el que el usuario pueda interactuar. En otras palabras, es el componente que, tras recibir la información, genera la interfaz de usuario de la aplicación, botones, textos, ventanas, llamadas a la acción, estilos, etc. Todo aquello que el usuario observa es generado por este componente.
+La vista es responsable de:
+- Recibir datos del modelo y los muestra al usuario.
+- Tienen un registro de su controlador asociado (normalmente porque además lo instancia).
+- Pueden dar el servicio de "Actualización()", para que sea invocado por el controlador o por el modelo (cuando es un modelo activo que informa de los cambios en los datos producidos por otros agentes).
 
 ### Controlador:
 
