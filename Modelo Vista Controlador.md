@@ -14,6 +14,13 @@ Es la capa donde se trabaja con los datos, por tanto contendrá mecanismos para 
 
 La vista presenta o muestra la información necesaria en un formato apropiado con el que el usuario pueda interactuar. En otras palabras, es el componente que, tras recibir la información, genera la interfaz de usuario de la aplicación, botones, textos, ventanas, llamadas a la acción, estilos, etc. Todo aquello que el usuario observa es generado por este componente.
 
+### Controlador:
+
+Este componente se encarga de gestionar las instrucciones que se reciben, atenderlas y procesarlas. Por medio de él se comunican el modelo y la vista: solicitando los datos necesarios; manipulándolos para obtener los resultados; y entregándolos a la vista para que pueda mostrarlos.
+El controlador es responsable de:
+- Recibe los eventos de entrada (un clic, un cambio en un campo de texto, etc.).
+- Contiene reglas de gestión de eventos, del tipo "SI Evento Z, entonces Acción W". Estas acciones pueden suponer peticiones al modelo o a las vistas. Una de estas peticiones a las vistas puede ser una llamada al método "Actualizar()". Una petición al modelo puede ser "Obtener_tiempo_de_entrega ( nueva_orden_de_venta )". 
+
 ## Ejemplo de MVC
 
 Creación del Index donde estará la interfaz:
